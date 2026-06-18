@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Beauty Pasion Ibiza — Tratamientos orgánicos y veganos certificados por la Unión Europea en el corazón de Ibiza. Belleza natural, consciente y exclusiva." />
+  <meta name="theme-color" content="#F5EFE6" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Beauty Pasion Ibiza" />
+  <meta property="og:description" content="Un nuevo concepto de belleza consciente en el corazón de Ibiza." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts — Cormorant Garamond (editorial serif) + Inter (sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <title>Beauty Pasion Ibiza — Belleza Consciente</title>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       OVERLAY DEL MENÚ LATERAL MÓVIL
+  ═══════════════════════════════════════════ -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════
+       HEADER
+  ═══════════════════════════════════════════ -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <a href="#inicio" class="logo" aria-label="Beauty Pasion Ibiza — inicio">
+        <span class="logo-main">Beauty Pasion</span>
+        <span class="logo-sub">Ibiza</span>
+      </a>
+
+      <!-- Navegación principal (escritorio) -->
+      <nav class="nav-desktop" aria-label="Navegación principal">
+        <a href="#inicio"    class="nav-link">Inicio</a>
+        <a href="#nosotros"  class="nav-link">Nosotros</a>
+        <a href="#servicios" class="nav-link">Servicios</a>
+        <a href="#galeria"   class="nav-link">Galería</a>
+        <a href="#resenas"   class="nav-link">Reseñas</a>
+        <a href="#reservas"  class="nav-link nav-cta">Reservar</a>
+        <a href="#contacto"  class="nav-link">Contacto</a>
+      </nav>
+
+      <!-- Botón menú hamburguesa (móvil) -->
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMobile">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <!-- Menú lateral deslizante (móvil) -->
+    <nav class="nav-mobile" id="navMobile" aria-label="Menú móvil" aria-hidden="true">
+      <div class="nav-mobile-inner">
+        <div class="nav-mobile-logo">
+          <span class="logo-main">Beauty Pasion</span>
+          <span class="logo-sub">Ibiza</span>
+        </div>
+        <ul class="nav-mobile-list" role="list">
+          <li><a href="#inicio"    class="nav-mobile-link" data-close-menu>Inicio</a></li>
+          <li><a href="#nosotros"  class="nav-mobile-link" data-close-menu>Nosotros</a></li>
+          <li><a href="#servicios" class="nav-mobile-link" data-close-menu>Servicios</a></li>
+          <li><a href="#galeria"   class="nav-mobile-link" data-close-menu>Galería</a></li>
+          <li><a href="#resenas"   class="nav-mobile-link" data-close-menu>Reseñas</a></li>
+          <li><a href="#contacto"  class="nav-mobile-link" data-close-menu>Contacto</a></li>
+          <li>
+            <a href="#reservas" class="nav-mobile-cta" data-close-menu>Reservar cita</a>
+          </li>
+        </ul>
+        <div class="nav-mobile-footer">
+          <p>+34 871 53 19 56</p>
+          <p>beautypasionibiza@gmail.com</p>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════
+         HERO — PORTADA EDITORIAL
+    ═══════════════════════════════════════════ -->
+    <section class="hero" id="inicio" aria-label="Portada principal">
+
+      <!-- Fondo parallax con imagen -->
+      <div class="hero-bg" id="heroBg" aria-hidden="true">
+        <div class="hero-bg-img" style="background-image: url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1600&q=85&auto=format&fit=crop')"></div>
+        <div class="hero-bg-overlay"></div>
+      </div>
+
+      <!-- Formas orgánicas decorativas -->
+      <div class="hero-shape hero-shape--1" aria-hidden="true"></div>
+      <div class="hero-shape hero-shape--2" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb--1" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb--2" aria-hidden="true"></div>
+
+      <div class="hero-inner container">
+
+        <!-- Columna izquierda — Contenido -->
+        <div class="hero-content">
+          <div class="hero-badge reveal-up" data-delay="0">
+            <span class="hero-badge-dot"></span>
+            Ibiza · España
+          </div>
+
+          <h1 class="hero-title reveal-up" data-delay="100">
+            Belleza natural<br />
+            <em>que respeta</em><br />
+            tu esencia
+          </h1>
+
+          <p class="hero-subtitle reveal-up" data-delay="200">
+            Tratamientos orgánicos y veganos certificados por la Unión Europea
+            en el corazón de Ibiza.
+          </p>
+
+          <div class="hero-actions reveal-up" data-delay="300">
+            <a href="#reservas" class="btn btn--primary">Reservar cita</a>
+            <a href="#servicios" class="btn btn--ghost">Descubrir tratamientos</a>
+          </div>
+
+          <!-- Indicadores de confianza -->
+          <div class="hero-trust reveal-up" data-delay="400">
+            <div class="hero-trust-item">
+              <span class="hero-trust-number">200+</span>
+              <span class="hero-trust-label">Reseñas verificadas</span>
+            </div>
+            <div class="hero-trust-divider" aria-hidden="true"></div>
+            <div class="hero-trust-item">
+              <span class="hero-trust-stars" aria-label="5 estrellas">★★★★★</span>
+              <span class="hero-trust-label">Valoración media</span>
+            </div>
+            <div class="hero-trust-divider" aria-hidden="true"></div>
+            <div class="hero-trust-item">
+              <span class="hero-trust-number">100%</span>
+              <span class="hero-trust-label">Productos orgánicos</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna derecha — Imagen editorial -->
+        <div class="hero-visual reveal-right" data-delay="150" aria-hidden="true">
+          <div class="hero-image-frame">
+            <img
+              src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=900&q=85&auto=format&fit=crop"
+              alt="Tratamiento facial natural en Beauty Pasion Ibiza"
+              class="hero-image"
+              loading="eager"
+              fetchpriority="high"
+            />
+            <!-- Tarjeta flotante decorativa -->
+            <div class="hero-float-card hero-float-card--1">
+              <span class="float-card-icon">✦</span>
+              <span>Certificado EU Orgánico</span>
+            </div>
+            <div class="hero-float-card hero-float-card--2">
+              <span class="float-card-icon">✦</span>
+              <span>100% Vegano</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <span class="scroll-line"></span>
+        <span class="scroll-text">Desliza</span>
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         NOSOTROS — COMPOSICIÓN EDITORIAL
+    ═══════════════════════════════════════════ -->
+    <section class="about" id="nosotros" aria-labelledby="about-title">
+      <div class="container about-grid">
+
+        <!-- Foto vertical grande -->
+        <div class="about-visual">
+          <div class="about-image-wrapper reveal-left">
+            <img
+              src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=800&q=85&auto=format&fit=crop"
+              alt="Espacio sereno de Beauty Pasion Ibiza"
+              class="about-image"
+              loading="lazy"
+            />
+            <div class="about-image-accent" aria-hidden="true"></div>
+          </div>
+
+          <!-- Bloque de confianza flotante -->
+          <div class="about-trust-badge reveal-up" data-delay="200">
+            <div class="trust-stars" aria-label="5 estrellas sobre 5">★★★★★</div>
+            <p class="trust-count">Más de <strong>200</strong> reseñas verificadas</p>
+            <p class="trust-rating">Valoración media <strong>5.0</strong> estrellas</p>
+            <div class="trust-avatars" aria-hidden="true">
+              <div class="avatar"></div>
+              <div class="avatar"></div>
+              <div class="avatar"></div>
+              <span>+197</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contenido editorial -->
+        <div class="about-content">
+          <span class="eyebrow reveal-up">BEAUTY PASION IBIZA</span>
+
+          <h2 class="about-title section-title reveal-up" id="about-title" data-delay="100">
+            Un nuevo concepto<br />
+            <em>de belleza consciente</em>
+          </h2>
+
+          <p class="about-text reveal-up" data-delay="200">
+            Creemos que el cuidado personal va más allá de la estética. Por eso trabajamos
+            con productos <strong>100% orgánicos y veganos</strong> certificados por la Unión
+            Europea, respetando tanto tu piel como el planeta.
+          </p>
+
+          <p class="about-text reveal-up" data-delay="280">
+            Nuestro centro en Santa Eulària des Riu es un refugio de calma donde cada
+            tratamiento nace de la fusión entre técnicas avanzadas y los ritmos naturales
+            del Mediterráneo.
+          </p>
+
+          <!-- Valores visuales -->
+          <div class="about-values reveal-up" data-delay="360">
+            <div class="about-value">
+              <div class="value-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                  <path d="M14 2C14 2 7 8 7 15a7 7 0 0014 0C21 8 14 2 14 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                  <path d="M14 10v8M11 13l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span>Belleza consciente</span>
+            </div>
+            <div class="about-value">
+              <div class="value-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                  <circle cx="14" cy="14" r="5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M14 3v3M14 22v3M3 14h3M22 14h3M5.93 5.93l2.12 2.12M19.95 19.95l2.12 2.12M5.93 22.07l2.12-2.12M19.95 8.05l2.12-2.12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span>Lujo sereno</span>
+            </div>
+            <div class="about-value">
+              <div class="value-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                  <path d="M14 25C14 25 4 19.5 4 12a6 6 0 0110-4.47A6 6 0 0124 12c0 7.5-10 13-10 13Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <span>Bienestar personal</span>
+            </div>
+            <div class="about-value">
+              <div class="value-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                  <path d="M5 14s0-8 9-8 9 8 9 8-1 7-9 7-9-7-9-7Z" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="14" cy="14" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <span>Naturaleza y sostenibilidad</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SERVICIOS — COMPOSICIÓN DINÁMICA
+    ═══════════════════════════════════════════ -->
+    <section class="services" id="servicios" aria-labelledby="services-title">
+      <div class="container">
+
+        <div class="section-header reveal-up">
+          <span class="eyebrow">LO QUE OFRECEMOS</span>
+          <h2 class="section-title" id="services-title">
+            Tratamientos diseñados<br />
+            <em>para realzar tu esencia</em>
+          </h2>
+        </div>
+
+        <!-- Grid dinámico — no es un grid de tarjetas iguales -->
+        <div class="services-grid">
+
+          <!-- Servicio 1 — Grande, ocupa más espacio -->
+          <article class="service-card service-card--large reveal-up" data-delay="0">
+            <div class="service-card-media">
+              <img
+                src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=900&q=85&auto=format&fit=crop"
+                alt="Cuidado capilar profesional"
+                loading="lazy"
+              />
+              <div class="service-card-overlay"></div>
+            </div>
+            <div class="service-card-body">
+              <span class="service-number" aria-hidden="true">01</span>
+              <h3 class="service-title">Cuidado Capilar</h3>
+              <p class="service-desc">Cortes, tratamientos y coloraciones que realzan tu belleza natural con técnicas artesanales y productos libres de tóxicos.</p>
+              <a href="#reservas" class="service-link">
+                Descubrir
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 2 — Destacado vertical -->
+          <article class="service-card service-card--tall reveal-up" data-delay="100">
+            <div class="service-card-media">
+              <img
+                src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=700&q=85&auto=format&fit=crop&crop=face"
+                alt="Tratamientos faciales naturales"
+                loading="lazy"
+              />
+              <div class="service-card-overlay"></div>
+            </div>
+            <div class="service-card-body">
+              <span class="service-number" aria-hidden="true">02</span>
+              <h3 class="service-title">Tratamientos Faciales</h3>
+              <ul class="service-list">
+                <li>Limpieza facial profunda</li>
+                <li>Lifting facial japonés</li>
+                <li>Microneedling</li>
+                <li>Drenaje linfático</li>
+              </ul>
+              <a href="#reservas" class="service-link">
+                Descubrir
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 3 — Pequeño, completar el grid -->
+          <article class="service-card service-card--accent reveal-up" data-delay="200">
+            <div class="service-card-media">
+              <img
+                src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=700&q=85&auto=format&fit=crop"
+                alt="Manicura y pedicura naturales"
+                loading="lazy"
+              />
+              <div class="service-card-overlay"></div>
+            </div>
+            <div class="service-card-body">
+              <span class="service-number" aria-hidden="true">03</span>
+              <h3 class="service-title">Belleza Integral</h3>
+              <ul class="service-list">
+                <li>Depilación</li>
+                <li>Manicura</li>
+                <li>Pedicura</li>
+              </ul>
+              <a href="#reservas" class="service-link">
+                Descubrir
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Bloque de cita decorativo — rompe la monotonía -->
+          <div class="services-quote reveal-up" data-delay="300" aria-hidden="true">
+            <blockquote>
+              "Cada tratamiento es una experiencia única diseñada para ti."
+            </blockquote>
+            <div class="services-quote-deco">✦</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         GALERÍA — COLLAGE EDITORIAL
+    ═══════════════════════════════════════════ -->
+    <section class="gallery" id="galeria" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="eyebrow">NUESTRA ESENCIA</span>
+          <h2 class="section-title" id="gallery-title">
+            Momentos de<br />
+            <em>belleza consciente</em>
+          </h2>
+        </div>
+      </div>
+
+      <!-- Galería sin contenedor — va al 100% del ancho -->
+      <div class="gallery-grid" role="list">
+
+        <div class="gallery-item gallery-item--tall reveal-up" role="listitem" data-delay="0">
+          <img src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=700&q=80&auto=format&fit=crop" alt="Ambiente sereno de spa" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <span>Ambiente & Calma</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-up" role="listitem" data-delay="80">
+          <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=700&q=80&auto=format&fit=crop" alt="Productos naturales orgánicos" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <span>Productos Orgánicos</span>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-item--wide reveal-up" role="listitem" data-delay="160">
+          <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=900&q=80&auto=format&fit=crop" alt="Tratamiento facial premium" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <span>Tratamientos Faciales</span>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-item--small reveal-up" role="listitem" data-delay="120">
+          <img src="https://images.unsplash.com/photo-1590439471364-192aa70c0b53?w=500&q=80&auto=format&fit=crop" alt="Manicura natural" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <span>Manicura</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-up" role="listitem" data-delay="200">
+          <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=700&q=80&auto=format&fit=crop" alt="Cuidado capilar" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <span>Cuidado Capilar</span>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-item--tall reveal-up" role="listitem" data-delay="240">
+          <img src="https://images.unsplash.com/photo-1542893560-4762faf3d4e3?w=700&q=80&auto=format&fit=crop" alt="Experiencia de bienestar" loading="lazy" />
+          <div class="gallery-item-overlay">
+            <span>Bienestar Total</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         TESTIMONIOS — CARRUSEL EMOCIONAL
+    ═══════════════════════════════════════════ -->
+    <section class="testimonials" id="resenas" aria-labelledby="testimonials-title">
+      <div class="testimonials-bg-deco" aria-hidden="true">
+        <div class="testi-deco-circle testi-deco-circle--1"></div>
+        <div class="testi-deco-circle testi-deco-circle--2"></div>
+      </div>
+
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="eyebrow">VOCES DE NUESTRA COMUNIDAD</span>
+          <h2 class="section-title" id="testimonials-title">
+            Lo que dicen<br />
+            <em>nuestras clientas</em>
+          </h2>
+        </div>
+
+        <!-- Carrusel -->
+        <div class="carousel" role="region" aria-label="Reseñas de clientas" aria-roledescription="carrusel">
+          <div class="carousel-track" id="carouselTrack">
+
+            <div class="testimonial-slide" role="group" aria-roledescription="diapositiva" aria-label="Reseña 1 de 5">
+              <div class="testimonial-card">
+                <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+                <blockquote class="testimonial-text">
+                  "Un lugar donde la profesionalidad y la tranquilidad se unen. Los tratamientos son increíbles y los productos naturales marcan la diferencia. Salí sintiéndome completamente renovada."
+                </blockquote>
+                <footer class="testimonial-author">
+                  <div class="author-avatar" aria-hidden="true">M</div>
+                  <div>
+                    <cite class="author-name">María García</cite>
+                    <span class="author-tag">Cliente verificada · Ibiza</span>
+                  </div>
+                </footer>
+              </div>
+            </div>
+
+            <div class="testimonial-slide" role="group" aria-roledescription="diapositiva" aria-label="Reseña 2 de 5">
+              <div class="testimonial-card">
+                <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+                <blockquote class="testimonial-text">
+                  "El lifting facial japonés cambió mi rutina de belleza por completo. El equipo es extraordinario, con una atención al detalle que no he encontrado en ningún otro centro de Ibiza."
+                </blockquote>
+                <footer class="testimonial-author">
+                  <div class="author-avatar" aria-hidden="true">S</div>
+                  <div>
+                    <cite class="author-name">Sofía Martínez</cite>
+                    <span class="author-tag">Cliente verificada · Barcelona</span>
+                  </div>
+                </footer>
+              </div>
+            </div>
+
+            <div class="testimonial-slide" role="group" aria-roledescription="diapositiva" aria-label="Reseña 3 de 5">
+              <div class="testimonial-card">
+                <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+                <blockquote class="testimonial-text">
+                  "Estoy absolutamente enamorada de este lugar. La filosofía de belleza consciente se siente en cada detalle: desde los productos que usan hasta la calidez del trato personal."
+                </blockquote>
+                <footer class="testimonial-author">
+                  <div class="author-avatar" aria-hidden="true">L</div>
+                  <div>
+                    <cite class="author-name">Laura Sánchez</cite>
+                    <span class="author-tag">Cliente verificada · Madrid</span>
+                  </div>
+                </footer>
+              </div>
+            </div>
+
+            <div class="testimonial-slide" role="group" aria-roledescription="diapositiva" aria-label="Reseña 4 de 5">
+              <div class="testimonial-card">
+                <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+                <blockquote class="testimonial-text">
+                  "La limpieza facial profunda con productos orgánicos fue una revelación. Mi piel jamás había lucido tan saludable. Es el único centro de estética que recomendaría sin dudar."
+                </blockquote>
+                <footer class="testimonial-author">
+                  <div class="author-avatar" aria-hidden="true">A</div>
+                  <div>
+                    <cite class="author-name">Ana Ruiz</cite>
+                    <span class="author-tag">Cliente verificada · Valencia</span>
+                  </div>
+                </footer>
+              </div>
+            </div>
+
+            <div class="testimonial-slide" role="group" aria-roledescription="diapositiva" aria-label="Reseña 5 de 5">
+              <div class="testimonial-card">
+                <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+                <blockquote class="testimonial-text">
+                  "Un oasis de paz en el corazón de Ibiza. La manicura con esmaltes veganos y la atención personalizada hacen de cada visita una experiencia que vas a querer repetir."
+                </blockquote>
+                <footer class="testimonial-author">
+                  <div class="author-avatar" aria-hidden="true">C</div>
+                  <div>
+                    <cite class="author-name">Carmen López</cite>
+                    <span class="author-tag">Cliente verificada · Sevilla</span>
+                  </div>
+                </footer>
+              </div>
+            </div>
+
+          </div><!-- /carousel-track -->
+
+          <!-- Controles de navegación -->
+          <div class="carousel-controls" aria-label="Controles del carrusel">
+            <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Reseña anterior">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M13 4l-6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Seleccionar reseña">
+              <!-- Se generan en JS -->
+            </div>
+
+            <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Siguiente reseña">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+        </div><!-- /carousel -->
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         RESERVAS — SECCIÓN DE CONVERSIÓN
+    ═══════════════════════════════════════════ -->
+    <section class="booking" id="reservas" aria-labelledby="booking-title">
+      <div class="booking-bg" aria-hidden="true">
+        <div class="booking-bg-shape booking-bg-shape--1"></div>
+        <div class="booking-bg-shape booking-bg-shape--2"></div>
+      </div>
+
+      <div class="container booking-inner">
+        <div class="booking-content reveal-up">
+          <span class="eyebrow eyebrow--light">RESERVA TU EXPERIENCIA</span>
+          <h2 class="section-title booking-title" id="booking-title">
+            Regálate un momento<br />
+            <em>para ti</em>
+          </h2>
+          <p class="booking-text">
+            Reserva tu experiencia de belleza consciente en Beauty Pasion Ibiza.
+            Cada cita es un viaje hacia el bienestar.
+          </p>
+
+          <div class="booking-features">
+            <div class="booking-feature">
+              <span class="booking-feature-icon" aria-hidden="true">✦</span>
+              <span>Confirmación inmediata</span>
+            </div>
+            <div class="booking-feature">
+              <span class="booking-feature-icon" aria-hidden="true">✦</span>
+              <span>Cancelación flexible</span>
+            </div>
+            <div class="booking-feature">
+              <span class="booking-feature-icon" aria-hidden="true">✦</span>
+              <span>Consulta personalizada</span>
+            </div>
+          </div>
+
+          <a
+            href="https://www.fresha.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--booking"
+            aria-label="Reservar cita en Fresha — abre en nueva pestaña"
+          >
+            Reservar en Fresha
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+
+          <p class="booking-note">
+            O llámanos directamente al
+            <a href="tel:+34871531956">+34 871 53 19 56</a>
+          </p>
+        </div>
+
+        <div class="booking-visual reveal-right" data-delay="200" aria-hidden="true">
+          <img
+            src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=700&q=85&auto=format&fit=crop"
+            alt=""
+            class="booking-image"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CONTACTO — DOS COLUMNAS
+    ═══════════════════════════════════════════ -->
+    <section class="contact" id="contacto" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+
+        <!-- Columna de información -->
+        <div class="contact-info">
+          <span class="eyebrow reveal-up">ENCUÉNTRANOS</span>
+          <h2 class="section-title reveal-up" id="contact-title" data-delay="80">
+            Ven a visitarnos<br />
+            <em>en Ibiza</em>
+          </h2>
+
+          <div class="contact-items">
+
+            <div class="contact-item reveal-up" data-delay="160">
+              <div class="contact-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M11 2C7.69 2 5 4.69 5 8c0 4.5 6 12 6 12s6-7.5 6-12c0-3.31-2.69-6-6-6Zm0 8a2 2 0 110-4 2 2 0 010 4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="contact-item-content">
+                <strong>Dirección</strong>
+                <p>Carrer del Mar 4, Bajos<br />Santa Eulària des Riu, Ibiza</p>
+              </div>
+            </div>
+
+            <div class="contact-item reveal-up" data-delay="220">
+              <div class="contact-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M3 5a2 2 0 012-2h2.28a1 1 0 01.95.68l1.08 3.23a1 1 0 01-.23 1.03L7.5 9.5s1.12 2.4 2.5 3.5 3.5 2.5 3.5 2.5l1.56-1.58a1 1 0 011.03-.23l3.23 1.08A1 1 0 0120 15.72V18a2 2 0 01-2 2C7.16 20 2 9 2 7a2 2 0 011-2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="contact-item-content">
+                <strong>Teléfono</strong>
+                <a href="tel:+34871531956">+34 871 53 19 56</a>
+              </div>
+            </div>
+
+            <div class="contact-item reveal-up" data-delay="280">
+              <div class="contact-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <rect x="2" y="5" width="18" height="13" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M2 8l9 5 9-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="contact-item-content">
+                <strong>Email</strong>
+                <a href="mailto:beautypasionibiza@gmail.com">beautypasionibiza@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item reveal-up" data-delay="340">
+              <div class="contact-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <circle cx="11" cy="11" r="9" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M11 6v5l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="contact-item-content">
+                <strong>Horario</strong>
+                <p>Lun – Vie: 9:00 – 20:00<br />Sábados: 10:00 – 17:00</p>
+              </div>
+            </div>
+
+          </div><!-- /contact-items -->
+        </div>
+
+        <!-- Columna del mapa -->
+        <div class="contact-map-wrapper reveal-right" data-delay="100">
+          <iframe
+            class="contact-map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3143.6743885843577!2d1.5369!3d38.9859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1299399b66ed5b4d%3A0x123456789abc!2sCarrer%20del%20Mar%204%2C%20Santa%20Eul%C3%A0ria%20des%20Riu%2C%20Ibiza!5e0!3m2!1ses!2ses!4v1699999999999"
+            title="Mapa de Beauty Pasion Ibiza — Carrer del Mar 4, Santa Eulàlia des Riu, Ibiza"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-deco-line" aria-hidden="true"></div>
+
+    <div class="container footer-grid">
+
+      <!-- Columna de marca -->
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-main">Beauty Pasion</span>
+          <span class="logo-sub">Ibiza</span>
+        </div>
+        <p class="footer-tagline">
+          Belleza sostenible, consciente<br />y creada para realzar tu esencia.
+        </p>
+        <!-- Redes sociales (placeholder SVG) -->
+        <div class="footer-social" aria-label="Redes sociales">
+          <a href="#" aria-label="Instagram" class="social-link">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <rect x="2" y="2" width="16" height="16" rx="5" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="10" cy="10" r="3.5" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="15" cy="5" r="1" fill="currentColor"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook" class="social-link">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M18 10a8 8 0 10-9.25 7.9V12.5H7v-2.5h1.75V8.38C8.75 6.58 9.86 5.5 11.5 5.5c.76 0 1.56.14 1.56.14v1.72h-.88c-.87 0-1.13.54-1.13 1.09V10H13l-.3 2.5h-1.95V17.9A8 8 0 0018 10Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="TikTok" class="social-link">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M13 2a4 4 0 004 4v3a6.96 6.96 0 01-4-1.26V13a5 5 0 11-5-5v3.1a2 2 0 100 3.8V2h5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Columna de navegación -->
+      <nav class="footer-nav" aria-label="Navegación del footer">
+        <h3 class="footer-nav-title">Navegación</h3>
+        <ul role="list">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#resenas">Reseñas</a></li>
+          <li><a href="#reservas">Reservar</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Columna de servicios -->
+      <div class="footer-nav">
+        <h3 class="footer-nav-title">Servicios</h3>
+        <ul role="list">
+          <li><a href="#servicios">Cuidado Capilar</a></li>
+          <li><a href="#servicios">Tratamientos Faciales</a></li>
+          <li><a href="#servicios">Lifting Japonés</a></li>
+          <li><a href="#servicios">Microneedling</a></li>
+          <li><a href="#servicios">Manicura & Pedicura</a></li>
+          <li><a href="#servicios">Depilación</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna de contacto -->
+      <div class="footer-contact">
+        <h3 class="footer-nav-title">Contacto</h3>
+        <address>
+          <p>Carrer del Mar 4, Bajos<br />Santa Eulària des Riu, Ibiza</p>
+          <a href="tel:+34871531956">+34 871 53 19 56</a>
+          <a href="mailto:beautypasionibiza@gmail.com">beautypasionibiza@gmail.com</a>
+        </address>
+        <a href="#reservas" class="btn btn--footer">Reservar ahora</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="currentYear"></span> Beauty Pasion Ibiza. Todos los derechos reservados.</p>
+      <p>Diseñado con amor en Ibiza, España.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
