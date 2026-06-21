@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="[DESCRIPCIÓN DEL NEGOCIO]" />
+  <meta name="theme-color" content="#F5EFE6" />
+
+  <!-- Google Fonts — Cormorant Garamond + Inter (cambiar según marca) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="base.css" />
+  <title>[NOMBRE DEL NEGOCIO]</title>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       OVERLAY MENÚ MÓVIL
+  ══════════════════════════════════════ -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+  <!-- ══════════════════════════════════════
+       HEADER
+       - Transparente al cargar
+       - Glassmorphism al hacer scroll
+       - Menú lateral deslizante en móvil
+  ══════════════════════════════════════ -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <div class="header-inner">
+
+      <a href="#inicio" class="logo" aria-label="[NOMBRE] — inicio">
+        <span class="logo-main">[NOMBRE PRINCIPAL]</span>
+        <span class="logo-sub">[TAGLINE CORTO]</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Navegación principal">
+        <a href="#inicio"   class="nav-link">Inicio</a>
+        <a href="#sobre"    class="nav-link">Nosotros</a>
+        <a href="#servicios" class="nav-link">Servicios</a>
+        <a href="#galeria"  class="nav-link">Galería</a>
+        <a href="#resenas"  class="nav-link">Reseñas</a>
+        <a href="#reservas" class="nav-link nav-cta">Reservar</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMobile">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <nav class="nav-mobile" id="navMobile" aria-label="Menú móvil" aria-hidden="true">
+      <div class="nav-mobile-inner">
+        <div class="nav-mobile-logo">
+          <span class="logo-main">[NOMBRE PRINCIPAL]</span>
+          <span class="logo-sub">[TAGLINE CORTO]</span>
+        </div>
+        <ul class="nav-mobile-list" role="list">
+          <li><a href="#inicio"    class="nav-mobile-link" data-close-menu>Inicio</a></li>
+          <li><a href="#sobre"     class="nav-mobile-link" data-close-menu>Nosotros</a></li>
+          <li><a href="#servicios" class="nav-mobile-link" data-close-menu>Servicios</a></li>
+          <li><a href="#galeria"   class="nav-mobile-link" data-close-menu>Galería</a></li>
+          <li><a href="#resenas"   class="nav-mobile-link" data-close-menu>Reseñas</a></li>
+          <li><a href="#contacto"  class="nav-mobile-link" data-close-menu>Contacto</a></li>
+          <li><a href="#reservas"  class="nav-mobile-cta" data-close-menu>Reservar cita</a></li>
+        </ul>
+        <div class="nav-mobile-footer">
+          <p>[TELÉFONO]</p>
+          <p>[EMAIL]</p>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ══════════════════════════════════════
+         HERO
+         Composición asimétrica — imagen derecha, texto izquierda.
+         Sistema de animación:
+           data-hero-item + data-hero-delay="ms" → orquestado al cargar
+           data-reveal="from-left/right/bottom/clip-*" → reveal por sección
+    ══════════════════════════════════════ -->
+    <section class="hero" id="inicio" aria-label="Portada principal">
+      <div class="hero-bg" id="heroBg" aria-hidden="true">
+        <!-- Cambiar URL por imagen propia -->
+        <div class="hero-bg-img" style="background-image: url('[URL_IMAGEN_HERO]')"></div>
+        <div class="hero-bg-overlay"></div>
+      </div>
+      <div class="hero-shape hero-shape--1" aria-hidden="true"></div>
+      <div class="hero-shape hero-shape--2" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb--1" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb--2" aria-hidden="true"></div>
+
+      <div class="hero-inner container">
+        <div class="hero-content">
+          <div class="hero-badge" data-hero-item data-hero-delay="0" data-reveal="from-left">
+            <span class="hero-badge-dot"></span>
+            [CIUDAD · PAÍS]
+          </div>
+          <h1 class="hero-title" data-hero-item data-hero-delay="140">
+            <span class="line-mask" data-reveal="from-bottom">[LÍNEA 1 DEL TÍTULO]</span>
+            <span class="line-mask" data-reveal="from-bottom" data-reveal-delay="80"><em>[LÍNEA 2 EN CURSIVA]</em></span>
+            <span class="line-mask" data-reveal="from-bottom" data-reveal-delay="160">[LÍNEA 3]</span>
+          </h1>
+          <p class="hero-subtitle" data-hero-item data-hero-delay="440" data-reveal="from-bottom">
+            [SUBTÍTULO DESCRIPTIVO — 1-2 frases sobre el negocio]
+          </p>
+          <div class="hero-actions" data-hero-item data-hero-delay="580" data-reveal="from-bottom">
+            <a href="#reservas" class="btn btn--primary">[CTA PRINCIPAL]</a>
+            <a href="#servicios" class="btn btn--ghost">[CTA SECUNDARIO]</a>
+          </div>
+          <div class="hero-trust" data-hero-item data-hero-delay="720" data-reveal="from-bottom">
+            <div class="hero-trust-item">
+              <span class="hero-trust-number">[NÚMERO]+</span>
+              <span class="hero-trust-label">[ETIQUETA]</span>
+            </div>
+            <div class="hero-trust-divider" aria-hidden="true"></div>
+            <div class="hero-trust-item">
+              <span class="hero-trust-stars" aria-label="5 estrellas">★★★★★</span>
+              <span class="hero-trust-label">Valoración media</span>
+            </div>
+            <div class="hero-trust-divider" aria-hidden="true"></div>
+            <div class="hero-trust-item">
+              <span class="hero-trust-number">[NÚMERO]%</span>
+              <span class="hero-trust-label">[ETIQUETA]</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-hero-item data-hero-delay="200" aria-hidden="true">
+          <div class="hero-image-frame" data-reveal="clip-up">
+            <img src="[URL_IMAGEN_HERO_LATERAL]" alt="[ALT TEXT]" class="hero-image" loading="eager" fetchpriority="high" />
+          </div>
+          <div class="hero-float-card hero-float-card--1" data-hero-item data-hero-delay="900">
+            <span class="float-card-icon">✦</span>
+            <span>[DATO DE CONFIANZA 1]</span>
+          </div>
+          <div class="hero-float-card hero-float-card--2" data-hero-item data-hero-delay="1050">
+            <span class="float-card-icon">✦</span>
+            <span>[DATO DE CONFIANZA 2]</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <span class="scroll-line"></span>
+        <span class="scroll-text">Desliza</span>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SOBRE NOSOTROS
+         Imagen izquierda (clip-right), texto derecha (from-left/bottom)
+    ══════════════════════════════════════ -->
+    <section class="about" id="sobre" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-visual">
+          <div class="about-image-wrapper">
+            <div class="img-reveal-wrap" data-reveal="clip-right">
+              <img src="[URL_IMAGEN_ABOUT]" alt="[ALT TEXT]" class="about-image" loading="lazy" />
+            </div>
+            <div class="about-image-accent" aria-hidden="true"></div>
+          </div>
+          <div class="about-trust-badge" data-reveal="scale-in" data-reveal-delay="500">
+            <div class="trust-stars">★★★★★</div>
+            <p class="trust-count">Más de <strong>[N]</strong> reseñas verificadas</p>
+            <p class="trust-rating">Valoración media <strong>5.0</strong> estrellas</p>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <span class="eyebrow" data-reveal="from-left">[NOMBRE DEL NEGOCIO]</span>
+          <h2 class="about-title section-title" id="about-title" data-reveal="from-bottom" data-reveal-delay="120">
+            [TÍTULO DE LA SECCIÓN]<br /><em>[SUBTÍTULO EN CURSIVA]</em>
+          </h2>
+          <p class="about-text" data-reveal="from-bottom" data-reveal-delay="260">
+            [PÁRRAFO 1 — descripción principal del negocio]
+          </p>
+          <p class="about-text" data-reveal="from-bottom" data-reveal-delay="380">
+            [PÁRRAFO 2 — valores o historia]
+          </p>
+          <div class="about-values" data-reveal-stagger data-reveal-stagger-delay="500">
+            <div class="about-value stagger-child"><div class="value-icon" aria-hidden="true"><!-- SVG --></div><span>[VALOR 1]</span></div>
+            <div class="about-value stagger-child"><div class="value-icon" aria-hidden="true"><!-- SVG --></div><span>[VALOR 2]</span></div>
+            <div class="about-value stagger-child"><div class="value-icon" aria-hidden="true"><!-- SVG --></div><span>[VALOR 3]</span></div>
+            <div class="about-value stagger-child"><div class="value-icon" aria-hidden="true"><!-- SVG --></div><span>[VALOR 4]</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SERVICIOS
+         Grid asimétrico: large (from-left), tall (from-bottom), accent (from-right)
+    ══════════════════════════════════════ -->
+    <section class="services" id="servicios" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow" data-reveal="from-left">[EYEBROW]</span>
+          <h2 class="section-title" id="services-title" data-reveal="from-bottom" data-reveal-delay="120">
+            [TÍTULO]<br /><em>[EN CURSIVA]</em>
+          </h2>
+        </div>
+        <div class="services-grid">
+          <article class="service-card service-card--large" data-reveal="from-left" data-reveal-delay="0">
+            <div class="service-card-media"><img src="[URL]" alt="[ALT]" loading="lazy" /><div class="service-card-overlay"></div></div>
+            <div class="service-card-body">
+              <span class="service-number" aria-hidden="true">01</span>
+              <h3 class="service-title">[SERVICIO 1]</h3>
+              <p class="service-desc">[DESCRIPCIÓN]</p>
+              <a href="#reservas" class="service-link">Descubrir →</a>
+            </div>
+          </article>
+          <article class="service-card service-card--tall" data-reveal="from-bottom" data-reveal-delay="160">
+            <div class="service-card-media"><img src="[URL]" alt="[ALT]" loading="lazy" /><div class="service-card-overlay"></div></div>
+            <div class="service-card-body">
+              <span class="service-number" aria-hidden="true">02</span>
+              <h3 class="service-title">[SERVICIO 2]</h3>
+              <ul class="service-list"><li>[ITEM]</li><li>[ITEM]</li></ul>
+              <a href="#reservas" class="service-link">Descubrir →</a>
+            </div>
+          </article>
+          <article class="service-card service-card--accent" data-reveal="from-right" data-reveal-delay="320">
+            <div class="service-card-media"><img src="[URL]" alt="[ALT]" loading="lazy" /><div class="service-card-overlay"></div></div>
+            <div class="service-card-body">
+              <span class="service-number" aria-hidden="true">03</span>
+              <h3 class="service-title">[SERVICIO 3]</h3>
+              <ul class="service-list"><li>[ITEM]</li><li>[ITEM]</li></ul>
+              <a href="#reservas" class="service-link">Descubrir →</a>
+            </div>
+          </article>
+          <div class="services-quote" data-reveal="scale-in" data-reveal-delay="480">
+            <blockquote>"[CITA BREVE DE MARCA]"</blockquote>
+            <div class="services-quote-deco">✦</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         GALERÍA
+         Items con dirección alternada (from-left, from-bottom, from-right)
+         + clip-up en la imagen interna
+    ══════════════════════════════════════ -->
+    <section class="gallery" id="galeria" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow" data-reveal="from-left">[EYEBROW]</span>
+          <h2 class="section-title" id="gallery-title" data-reveal="from-bottom" data-reveal-delay="120">
+            [TÍTULO]<br /><em>[EN CURSIVA]</em>
+          </h2>
+        </div>
+      </div>
+      <div class="gallery-grid" role="list">
+        <!-- Repetir este patrón con distintos data-reveal para alternar dirección -->
+        <div class="gallery-item gallery-item--tall" role="listitem" data-reveal="from-left" data-reveal-delay="0">
+          <div class="img-reveal-wrap img-reveal-wrap--gallery" data-reveal="clip-up"><img src="[URL]" alt="[ALT]" loading="lazy" /></div>
+          <div class="gallery-item-overlay"><span>[ETIQUETA]</span></div>
+        </div>
+        <div class="gallery-item" role="listitem" data-reveal="from-bottom" data-reveal-delay="120">
+          <div class="img-reveal-wrap img-reveal-wrap--gallery" data-reveal="clip-up"><img src="[URL]" alt="[ALT]" loading="lazy" /></div>
+          <div class="gallery-item-overlay"><span>[ETIQUETA]</span></div>
+        </div>
+        <div class="gallery-item gallery-item--wide" role="listitem" data-reveal="from-right" data-reveal-delay="240">
+          <div class="img-reveal-wrap img-reveal-wrap--gallery" data-reveal="clip-up"><img src="[URL]" alt="[ALT]" loading="lazy" /></div>
+          <div class="gallery-item-overlay"><span>[ETIQUETA]</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         TESTIMONIOS — CARRUSEL JS VANILLA
+    ══════════════════════════════════════ -->
+    <section class="testimonials" id="resenas" aria-labelledby="testimonials-title">
+      <div class="testimonials-bg-deco" aria-hidden="true">
+        <div class="testi-deco-circle testi-deco-circle--1"></div>
+        <div class="testi-deco-circle testi-deco-circle--2"></div>
+      </div>
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow" data-reveal="from-left">[EYEBROW]</span>
+          <h2 class="section-title" id="testimonials-title" data-reveal="from-bottom" data-reveal-delay="120">
+            [TÍTULO]<br /><em>[EN CURSIVA]</em>
+          </h2>
+        </div>
+        <div class="carousel" role="region" aria-label="Reseñas" data-reveal="from-bottom" data-reveal-delay="280">
+          <div class="carousel-track" id="carouselTrack">
+            <!-- Repetir .testimonial-slide para cada reseña -->
+            <div class="testimonial-slide" role="group" aria-roledescription="diapositiva" aria-label="Reseña 1 de N">
+              <div class="testimonial-card">
+                <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+                <blockquote class="testimonial-text">"[TEXTO DE LA RESEÑA]"</blockquote>
+                <footer class="testimonial-author">
+                  <div class="author-avatar" aria-hidden="true">[INICIAL]</div>
+                  <div><cite class="author-name">[NOMBRE]</cite><span class="author-tag">Cliente verificada · [CIUDAD]</span></div>
+                </footer>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-controls" aria-label="Controles del carrusel">
+            <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Anterior">←</button>
+            <div class="carousel-dots" id="carouselDots" role="tablist"></div>
+            <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Siguiente">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         RESERVAS — CTA PRINCIPAL
+         Fondo oscuro, contenido desde izquierda, imagen clip-left
+    ══════════════════════════════════════ -->
+    <section class="booking" id="reservas" aria-labelledby="booking-title">
+      <div class="booking-bg" aria-hidden="true">
+        <div class="booking-bg-shape booking-bg-shape--1"></div>
+        <div class="booking-bg-shape booking-bg-shape--2"></div>
+      </div>
+      <div class="container booking-inner">
+        <div class="booking-content">
+          <span class="eyebrow eyebrow--light" data-reveal="from-left">[EYEBROW]</span>
+          <h2 class="section-title booking-title" id="booking-title" data-reveal="from-bottom" data-reveal-delay="140">
+            [TÍTULO CTA]<br /><em>[EN CURSIVA]</em>
+          </h2>
+          <p class="booking-text" data-reveal="from-bottom" data-reveal-delay="280">[TEXTO DE APOYO]</p>
+          <div class="booking-features" data-reveal-stagger data-reveal-stagger-delay="400">
+            <div class="booking-feature stagger-child"><span class="booking-feature-icon">✦</span><span>[BENEFICIO 1]</span></div>
+            <div class="booking-feature stagger-child"><span class="booking-feature-icon">✦</span><span>[BENEFICIO 2]</span></div>
+            <div class="booking-feature stagger-child"><span class="booking-feature-icon">✦</span><span>[BENEFICIO 3]</span></div>
+          </div>
+          <div data-reveal="from-bottom" data-reveal-delay="620">
+            <a href="[URL_RESERVAS]" target="_blank" rel="noopener noreferrer" class="btn btn--booking">[TEXTO BOTÓN] →</a>
+            <p class="booking-note">O llámanos al <a href="tel:[TELÉFONO]">[TELÉFONO]</a></p>
+          </div>
+        </div>
+        <div class="booking-visual" data-reveal="clip-left" data-reveal-delay="100">
+          <img src="[URL_IMAGEN]" alt="" class="booking-image" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         CONTACTO
+         Info desde izquierda (stagger), mapa clip-left desde derecha
+    ══════════════════════════════════════ -->
+    <section class="contact" id="contacto" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <span class="eyebrow" data-reveal="from-left">[EYEBROW]</span>
+          <h2 class="section-title" id="contact-title" data-reveal="from-bottom" data-reveal-delay="120">
+            [TÍTULO]<br /><em>[EN CURSIVA]</em>
+          </h2>
+          <div class="contact-items" data-reveal-stagger data-reveal-stagger-delay="280">
+            <div class="contact-item stagger-child">
+              <div class="contact-icon"><!-- SVG --></div>
+              <div class="contact-item-content"><strong>Dirección</strong><p>[DIRECCIÓN]</p></div>
+            </div>
+            <div class="contact-item stagger-child">
+              <div class="contact-icon"><!-- SVG --></div>
+              <div class="contact-item-content"><strong>Teléfono</strong><a href="tel:[TEL]">[TEL]</a></div>
+            </div>
+            <div class="contact-item stagger-child">
+              <div class="contact-icon"><!-- SVG --></div>
+              <div class="contact-item-content"><strong>Email</strong><a href="mailto:[EMAIL]">[EMAIL]</a></div>
+            </div>
+            <div class="contact-item stagger-child">
+              <div class="contact-icon"><!-- SVG --></div>
+              <div class="contact-item-content"><strong>Horario</strong><p>[HORARIO]</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map-wrapper" data-reveal="clip-left" data-reveal-delay="200">
+          <iframe class="contact-map" src="[URL_MAPA_EMBED]" title="Mapa de [NOMBRE]" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-deco-line" aria-hidden="true"></div>
+    <div class="container footer-grid">
+      <div class="footer-brand" data-reveal="from-left">
+        <div class="footer-logo"><span class="logo-main">[NOMBRE]</span><span class="logo-sub">[TAGLINE]</span></div>
+        <p class="footer-tagline">[DESCRIPCIÓN BREVE DE MARCA]</p>
+        <div class="footer-social">
+          <!-- Añadir enlaces reales -->
+          <a href="#" aria-label="Instagram" class="social-link"><!-- SVG --></a>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer nav" data-reveal="from-bottom" data-reveal-delay="100">
+        <h3 class="footer-nav-title">Navegación</h3>
+        <ul role="list">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre">Nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact" data-reveal="from-right" data-reveal-delay="200">
+        <h3 class="footer-nav-title">Contacto</h3>
+        <address>
+          <p>[DIRECCIÓN]</p>
+          <a href="tel:[TEL]">[TEL]</a>
+          <a href="mailto:[EMAIL]">[EMAIL]</a>
+        </address>
+        <a href="#reservas" class="btn btn--footer">Reservar ahora</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="currentYear"></span> [NOMBRE]. Todos los derechos reservados.</p>
+      <p>Diseñado con amor en [CIUDAD].</p>
+    </div>
+  </footer>
+
+  <script src="base.js"></script>
+</body>
+</html>
